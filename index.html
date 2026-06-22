@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Prueba de Hosteo - Git</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: #0d1117;
+      color: #c9d1d9;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+    }
+
+    header {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+
+    header h1 {
+      font-size: 2rem;
+      color: #58a6ff;
+    }
+
+    header p {
+      margin-top: 8px;
+      color: #8b949e;
+      font-size: 0.95rem;
+    }
+
+    .card-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 16px;
+      width: 100%;
+      max-width: 800px;
+    }
+
+    .card {
+      background: #161b22;
+      border: 1px solid #30363d;
+      border-radius: 10px;
+      padding: 20px;
+      transition: border-color 0.2s;
+    }
+
+    .card:hover {
+      border-color: #58a6ff;
+    }
+
+    .card h3 {
+      font-size: 1rem;
+      color: #58a6ff;
+      margin-bottom: 8px;
+    }
+
+    .card p {
+      font-size: 0.85rem;
+      color: #8b949e;
+      line-height: 1.5;
+    }
+
+    .badge {
+      display: inline-block;
+      margin-top: 10px;
+      padding: 3px 10px;
+      border-radius: 20px;
+      font-size: 0.75rem;
+      font-weight: 600;
+      background: #1f6feb33;
+      color: #58a6ff;
+      border: 1px solid #1f6feb;
+    }
+
+    .status-bar {
+      margin-top: 40px;
+      background: #161b22;
+      border: 1px solid #30363d;
+      border-radius: 10px;
+      padding: 16px 24px;
+      width: 100%;
+      max-width: 800px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .status-item {
+      font-size: 0.85rem;
+      color: #8b949e;
+    }
+
+    .status-item span {
+      color: #3fb950;
+      font-weight: 600;
+    }
+
+    .btn {
+      margin-top: 32px;
+      padding: 10px 24px;
+      background: #238636;
+      color: #fff;
+      border: none;
+      border-radius: 6px;
+      font-size: 0.9rem;
+      cursor: pointer;
+      transition: background 0.2s;
+    }
+
+    .btn:hover {
+      background: #2ea043;
+    }
+
+    #mensaje {
+      margin-top: 14px;
+      font-size: 0.85rem;
+      color: #3fb950;
+      min-height: 20px;
+    }
+
+    footer {
+      margin-top: 48px;
+      font-size: 0.78rem;
+      color: #484f58;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Prueba de Hosteo Git</h1>
+    <p>Archivo estático — HTML + CSS + JS</p>
+  </header>
+
+  <div class="card-grid">
+    <div class="card">
+      <h3>Repositorio</h3>
+      <p>proyecto-demo</p>
+      <span class="badge">main</span>
+    </div>
+    <div class="card">
+      <h3>Version</h3>
+      <p>v1.0.0 — Estable</p>
+      <span class="badge">release</span>
+    </div>
+    <div class="card">
+      <h3>Stack</h3>
+      <p>FastAPI · PostgreSQL · Redis</p>
+      <span class="badge">backend</span>
+    </div>
+    <div class="card">
+      <h3>Estado</h3>
+      <p>Sitio desplegado correctamente</p>
+      <span class="badge">live</span>
+    </div>
+  </div>
+
+  <div class="status-bar">
+    <div class="status-item">Build: <span>Exitoso</span></div>
+    <div class="status-item">Rama: <span>main</span></div>
+    <div class="status-item">Commits: <span>5</span></div>
+    <div class="status-item" id="hora">Hora: <span>--:--:--</span></div>
+  </div>
+
+  <button class="btn" onclick="verificar()">Verificar conexion</button>
+  <div id="mensaje"></div>
+
+  <footer>proyecto-demo &copy; 2026 — Solo para pruebas</footer>
+
+  <script>
+    function actualizarHora() {
+      const ahora = new Date();
+      const h = String(ahora.getHours()).padStart(2, '0');
+      const m = String(ahora.getMinutes()).padStart(2, '0');
+      const s = String(ahora.getSeconds()).padStart(2, '0');
+      document.querySelector('#hora span').textContent = `${h}:${m}:${s}`;
+    }
+
+    function verificar() {
+      const msg = document.getElementById('mensaje');
+      msg.textContent = 'Comprobando...';
+      setTimeout(() => {
+        msg.textContent = 'Conexion exitosa. El hosteo esta funcionando correctamente.';
+      }, 800);
+    }
+
+    actualizarHora();
+    setInterval(actualizarHora, 1000);
+  </script>
+
+</body>
+</html>
