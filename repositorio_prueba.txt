@@ -1,0 +1,64 @@
+==============================================
+  DATOS DE PRUEBA - REPOSITORIO
+==============================================
+
+# INFORMACIÓN DEL REPOSITORIO
+Nombre:         proyecto-demo
+Descripción:    Repositorio de prueba para desarrollo
+Versión:        1.0.0
+Fecha creación: 2026-06-22
+Estado:         Activo
+
+----------------------------------------------
+# RAMAS (BRANCHES)
+----------------------------------------------
+main          -> rama principal (producción)
+develop       -> rama de desarrollo
+feature/login -> nueva funcionalidad de login
+hotfix/bug-42 -> corrección urgente
+
+----------------------------------------------
+# CONTRIBUIDORES
+----------------------------------------------
+ID    Nombre              Email                    Rol
+001   Alan García         alan@ejemplo.com         Admin
+002   María López         maria@ejemplo.com        Developer
+003   Carlos Mendoza      carlos@ejemplo.com       Developer
+004   Ana Torres          ana@ejemplo.com          QA
+
+----------------------------------------------
+# HISTORIAL DE COMMITS (EJEMPLO)
+----------------------------------------------
+a1b2c3d  2026-06-22  Alan García       Initial commit
+e4f5g6h  2026-06-20  María López       Add login feature
+i7j8k9l  2026-06-18  Carlos Mendoza    Fix navbar bug
+m1n2o3p  2026-06-15  Ana Torres        Add unit tests
+q4r5s6t  2026-06-10  Alan García       Update README
+
+----------------------------------------------
+# ISSUES ABIERTOS
+----------------------------------------------
+#001  [BUG]      Login falla en móvil            Alta      Sin asignar
+#002  [FEATURE]  Agregar modo oscuro             Media     María López
+#003  [BUG]      Error 404 en ruta /perfil       Alta      Carlos Mendoza
+#004  [DOCS]     Actualizar documentación API    Baja      Sin asignar
+
+----------------------------------------------
+# TAGS / VERSIONES
+----------------------------------------------
+v1.0.0   ->  2026-06-22  Versión estable inicial
+v0.9.0   ->  2026-06-01  Release candidate
+v0.8.5   ->  2026-05-15  Beta pública
+
+----------------------------------------------
+# DEPENDENCIAS PRINCIPALES
+----------------------------------------------
+Lenguaje:    Python 3.11
+Framework:   FastAPI 0.110.0
+Base datos:  PostgreSQL 16
+Cache:       Redis 7.2
+Tests:       pytest 8.1.0
+
+==============================================
+  FIN DEL ARCHIVO DE PRUEBA
+==============================================
